@@ -12,7 +12,7 @@ jobs:
                 uses: azure/login@v1
                 with:
                     registry: <registry-name>.azurecr.io
-                    client_id: ${{ vars.AZURE_CLIENT_ID }}
+                    client_id: ${{ secrets.AZURE_CLIENT_ID }}
                     password: ${{ secrets.AZURE_CLIENT_SECRETS }}
-                    tenant-id: ${{ vars.AZURE_TENANT_ID }}
+                    tenant-id: ${{ secrets.AZURE_TENANT_ID }}
                     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
