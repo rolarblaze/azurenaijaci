@@ -19,7 +19,7 @@ jobs:
                 uses: docker/build-push-action@v5
             
                 with:
-                    dockerfile: Dockerfile
-                    context: . 
+                    #dockerfile: Dockerfile
+                    context: Dockerfile 
                     run: docker build --tag solar-system:$GITHUB_SHA .
                     push: false
