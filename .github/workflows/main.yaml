@@ -20,6 +20,6 @@ jobs:
             
                 with:
                     #dockerfile: Dockerfile
-                    context: Dockerfile 
+                    context: . 
                     run: docker build --tag solar-system:$GITHUB_SHA .
                     push: false
