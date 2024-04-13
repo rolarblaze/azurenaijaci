@@ -9,10 +9,7 @@ jobs:
         steps:
             - 
                 name: Azure ACR Login
-                uses: azure/login@v1
+                uses: docker/login-action@v3
                 with:
-                    registry: <registry-name>.azurecr.io
-                    client_id: ${{ secrets.AZURE_CLIENT_ID }}
-                    password: ${{ secrets.AZURE_CLIENT_SECRETS }}
-                    tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-                    subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+                    username: ${{ vars.DOCKERHUB_USERNAME }}
+                    password: ${{ secrets.DOCKERHUB_TOKEN }}
