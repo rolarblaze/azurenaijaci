@@ -1,0 +1,16 @@
+name: My First CI
+
+on: 
+    push:
+        branches: main
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - 
+                name: Azure ACR Login
+                uses: docker/login-actions@v3
+                with:
+                    registry: <registry-name>.azurecr.io
+                    username: ${{ vars.AZURE_CLIENT_ID }}
+                    password: ${{ secrets.AZURE_CLIENT_SECRETS }}
