@@ -9,7 +9,8 @@ jobs:
         steps:
             - 
                 name: Login to ACR
-                uses: azure/docker-action@v1
+                #uses: actions/checkout@v2
+                uses: azure/docker-login@v1
                 with:
                     registry: azurenaija.azurecr.io
                     username: ${{ secrets.REGISTRY_USERNAME }}
