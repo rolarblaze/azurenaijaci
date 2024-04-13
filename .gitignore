@@ -1,0 +1,6 @@
+
+test-results.xml
+node_modules
+
+Dockerfile
+.dockerignore
