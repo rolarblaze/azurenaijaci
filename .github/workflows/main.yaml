@@ -20,6 +20,7 @@ jobs:
                 name: Build and push
                 uses: docker/build-push-action@v5
                 with:
+                    dockerfile: Dockerfile
                     context: .
                     push: true
                     tags: blueninjas/planet:latest
