@@ -22,5 +22,6 @@ jobs:
                     dockerfile: Dockerfile
                     context: . 
                     push: false
-                    tags: docker build --tag solar-system:$GITHUB_SHA .
+                    tags: ${{ vars.DOCKERHUB_USERNAME }}/solr-system:${{ github.sha}}
+                        
                     
