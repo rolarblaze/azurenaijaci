@@ -9,7 +9,7 @@ jobs:
         steps:
             - 
                 name: Login to ACR
-                uses: docker/login-action@v3
+                uses: azure/docker-action@v1
                 with:
                     registry: azurenaija.azurecr.io
                     username: ${{ secrets.REGISTRY_USERNAME }}
